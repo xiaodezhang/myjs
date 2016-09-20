@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title><title></title>
+    <link rel="stylesheet" type="text/css" href="../../Resource/EasyUI/themes/bootstrap/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="../../Resource/EasyUI/themes/icon.css" />
+    <link rel="stylesheet" type="text/css" href="../../Resource/EasyUI/css/Common.css" />
+    <script type="text/javascript" src="../../Resource/EasyUI/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="../../Resource/EasyUI/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../../Resource/Js/Common.js"></script>
+    <script type="text/javascript" src="Js/direct.js"></script>
+    <script type="text/javascript">
+        loadJsFile("../../Resource/EasyUI/locale/");
+    </script>
+</head>
+<body>
+    <div class="itemhead">
+        <h3>定向</h3>
+    </div>
+    
+    <div class="item" style="width: 1100px">
+        <div style="float: left; width: 500px;">
+        	<fieldset>
+        		<legend>主天线</legend>
+            <table style="width: 100%;">
+ 
+                <tr>
+                    <td align="right" class="td_title">
+                        <span id="tagLatitude">纬度</span>:
+                    </td>
+                    <td align="left">
+                        <span id="spanLatitude" class="td_span"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" class="td_title">
+                        <span id="tagLongitude">经度</span>:
+                    </td>
+                    <td align="left">
+                        <span id="spanLongitude" class="td_span"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" class="td_title">
+                        <span id="tagHeight">高度</span>:
+                    </td>
+                    <td align="left">
+                        <span id="spanHeight" class="td_span"></span>
+                    </td>
+                </tr>
+            </table>
+          </fieldset>
+        </div>
+       
+        <div style="float: right; width: 500px;">
+        	<fieldset>
+        		
+        		<legend>副天线</legend>
+           
+            <table style="width: 100%;">
+               
+                <tr>
+                    <td align="right" class="td_title">
+                        <span id="tagPdop">纬度</span>:
+                    </td>
+                    <td align="left">
+                        <span id="lat" class="td_span"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" class="td_title">
+                        <span id="taglon">经度</span>:
+                    </td>
+                    <td align="left">
+                        <span id="lon" class="td_span"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" class="td_title">
+                        <span id="height">高程</span>:
+                    </td>
+                    <td align="left">
+                        <span id="hgt" class="td_span"></span>
+                    </td>
+                </tr>
+            </table>
+          </fieldset>
+        </div>
+    </div>
+    <div style="clear: both"></div>
+    
+    <div class="item" style="width: 1100px">
+        <div style="float: left; width: 500px;">
+        	<fieldset>
+        		<legend>方向</legend>
+            
+            <table style="width: 100%;">
+
+                <tr>
+                    <td align="right" class="td_title">
+                        <span >俯仰角</span>:
+                    </td>
+                    <td align="left">
+                        <span id="pitch" class="td_span"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" class="td_title">
+                        <span >方位角</span>:
+                    </td>
+                    <td align="left">
+                        <span id="heading" class="td_span"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" class="td_title">
+                        <span id="tagHeight">基线</span>:
+                    </td>
+                    <td align="left">
+                        <span id="roll" class="td_span"></span>
+                    </td>
+                </tr>
+            </table>
+          </fieldset>
+        </div>
+        <div style="float: right; width: 500px;">
+        	<fieldset>
+        		
+        		<legend>状态</legend>
+            
+            <table style="width: 100%;">
+                
+                <tr>
+                    <td align="right" class="td_title">
+                        <span id="tagPdop">定向状态</span>:
+                    </td>
+                    <td align="left">
+                        <span id="qf" class="td_span"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" class="td_title">
+                        <span id="lon">HDOP</span>:
+                    </td>
+                    <td align="left">
+                        <span id="hdop" class="td_span"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" class="td_title">
+                        <span id="height">卫星数</span>:
+                    </td>
+                    <td align="left">
+                        <span id="satnum" class="td_span"></span>
+                    </td>
+                </tr>
+            </table>
+          </fieldset>
+        </div>
+    </div>
+    <div style="clear: both">
+    </div>
+</body>
+</html>

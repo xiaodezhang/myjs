@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../Resource/EasyUI/themes/bootstrap/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="../../Resource/EasyUI/themes/icon.css" />
+    <link rel="stylesheet" type="text/css" href="../../Resource/EasyUI/css/Common.css" />
+    <script type="text/javascript" src="../../Resource/EasyUI/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="../../Resource/EasyUI/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../../Resource/Js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../Resource/Js/Common.js"></script>
+    <script type="text/javascript" src="Js/nconfig.js"></script>
+    <script type="text/javascript">
+        loadJsFile("../../Resource/EasyUI/locale/");
+    </script>
+</head>
+<body>
+	
+  <h3>网口配置</h3>
+  <div class="item">
+   <div style="margin-bottom:10px;">
+   <select class="easyui-combobox" id="clientserver" data-options="panelHeight:'auto',editable:false"  style="width: 218px;">
+   <option value="1">客户端</option>
+   <option value="0">服务器</option>
+   </select>
+   </div>
+   <table>
+       <tr>
+         <td  class="lap_put">
+           <div id="clientbool" style="display:block;">
+            <span>服务器IP:</span>
+       
+            <span class="td_span">
+                <input id="ip" class="easyui-validatebox " style="width: 130px;"/>
+            </span>
+         </td>
+           </div>
+       </tr>
+       <tr>       
+          <td  class="lap_put">  
+            <span style="margin-right:28px;"> 端口:</span>
+
+            <span class="td_span">
+                <input id="port" class="easyui-validatebox" style="width: 130px;"/>
+            </span>
+          </td> 
+       </tr>
+   </table>
+    
+    <div style="margin-top:40px;">
+        <a href="javascript:void(0)" class="blue_btn"
+            onclick="btnsave();"><span id="tagcancel">保存</span></a>
+    </div>
+   </div>
+</body>
+</html>
+

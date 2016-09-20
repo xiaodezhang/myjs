@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../Resource/EasyUI/themes/bootstrap/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="../../Resource/EasyUI/themes/icon.css" />
+    <link rel="stylesheet" type="text/css" href="../../Resource/EasyUI/css/Common.css" />
+    <script type="text/javascript" src="../../Resource/EasyUI/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="../../Resource/EasyUI/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../../Resource/Js/Common.js"></script>
+    <script type="text/javascript" src="Js/SlTrackTable.js"></script>
+    <script type="text/javascript">
+        loadJsFile("../../Resource/EasyUI/locale/");
+    </script>
+</head>
+<body>
+    <div class="itemhead">
+        <h3>卫星跟踪表</h3>
+    </div>
+     <div  class="item">
+        <div id="tbar" style="margin-bottom:20px;">
+       
+            <label >全部</label>
+            <input type="radio" id="tagAll" name="satselect" checked="checked" onclick="searchInfo('all');" />
+
+           <label class="lap_left"> GPS</label>
+            <input type="radio" id="tagGps" name="satselect" onclick="searchInfo('gps');" />
+
+           <label class="lap_left">GLONASS</label>
+            <input type="radio" id="tagGlon" name="satselect" onclick="searchInfo('glonass');" />
+
+           <label class="lap_left"> BDS</label>
+           <input type="radio" id="tagBds" name="satselect" onclick="searchInfo('bds');"/>
+           
+           <label class="lap_left"> GALILEO</label>
+           <input type="radio" id="tagGalileo"  name="satselect" onclick="searchInfo('galileo');"/>
+
+           <label class="lap_left">SBAS</label>
+            <input type="radio" id="tagSbas" name="satselect" onclick="searchInfo('sbas');" />
+
+
+        </div> 
+   
+        <div >
+          <table id="dgrid">
+          </table>
+        </div> 
+    
+    <div>
+</body>
+</html>

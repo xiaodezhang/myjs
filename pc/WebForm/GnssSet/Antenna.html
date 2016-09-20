@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../Resource/EasyUI/themes/bootstrap/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="../../Resource/EasyUI/themes/icon.css" />
+    <link rel="stylesheet" type="text/css" href="../../Resource/EasyUI/css/Common.css" />
+    <script type="text/javascript" src="../../Resource/EasyUI/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="../../Resource/EasyUI/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../../Resource/Js/Common.js"></script>
+    <script type="text/javascript" src="Js/Antenna.js"></script>
+    <script type="text/javascript">
+        loadJsFile("../../Resource/EasyUI/locale/");
+    </script>
+</head>
+<body>
+     <div class="itemhead">
+        <h3>主副天线设置
+        </h3>
+    </div>
+
+    <div class="item">
+        <table style="width: 320px">
+            <tr>
+                <td class="lap_put" align="right">
+                    Tcp/ip:
+                </td>
+                <td  class="lap_put"  style="padding-left:15px;">
+                     <input id="TimeInterYes" type="radio" name="com3" /><span
+                            id="tagTimeInter">主天线</span>
+                </td>
+                <td  class="lap_put"  style="padding-left:15px;" >
+                     <input id="Radio1" type="radio" name="com3"  /><span
+                            id="Span1">副天线</span>
+                </td>
+            </tr>
+             <tr>
+                <td class="lap_put" align="right">
+                    串口/com1:
+                </td>
+                <td class="lap_put"  style="padding-left:15px;">
+                     <input id="TimeInterYes" type="radio" name="com1" /><span
+                            id="tagTimeInter">主天线</span>
+                </td>
+                <td class="lap_put"  style="padding-left:15px;" >
+                     <input id="Radio1" type="radio" name="com1" /><span
+                            id="Span1">副天线</span>
+                </td>
+            </tr>
+              <tr>
+                <td class="lap_put" align="right">
+                    串口/com2:
+                </td>
+                <td class="lap_put"  style="padding-left:15px;">
+                     <input id="TimeInterYes" type="radio" name="com2" /><span
+                            id="tagTimeInter">主天线</span>
+                </td>
+                <td  class="lap_put"  style="padding-left:15px;" >
+                     <input id="Radio1" type="radio" name="com2" /><span
+                            id="Span1">副天线</span>
+                </td>
+            </tr>
+        
+        </table>
+     </div>
+      <div class="item" id="divSave">
+                    <a href="javascript:void(0)" class="blue_btn" style="margin-left:130px;" onclick="btnSave();">
+                        <span id="tagSave">确认</span>
+                    </a> 
+     </div>
+
+</body>
+</html>

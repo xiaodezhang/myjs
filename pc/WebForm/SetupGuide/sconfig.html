@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../Resource/EasyUI/themes/bootstrap/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="../../Resource/EasyUI/themes/icon.css" />
+    <link rel="stylesheet" type="text/css" href="../../Resource/EasyUI/css/Common.css" />
+    <script type="text/javascript" src="../../Resource/EasyUI/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="../../Resource/EasyUI/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../../Resource/Js/Common.js"></script>
+    <script type="text/javascript" src="../../Resource/Js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="Js/sconfig.js"></script>
+    <script type="text/javascript">
+        loadJsFile("../../Resource/EasyUI/locale/");
+    </script>
+</head>
+<body>
+
+     <h3>串口配置</h3>
+
+     
+    <div class="item">
+     <table>
+       <tr>
+           <td class="lap_put" style="font-size:14px;">串口</td>
+           <td class="lap_put">
+       <select class="easyui-combobox" id="port" data-options="panelHeight:'auto',editable:false"  style="width: 218px;">
+       <option value="1">com1</option>
+       <option value="2">com2</option>
+       <option value="3">com3</option>
+       </select>
+       </td>
+       </tr>
+       <tr>
+           <td class="lap_put" style="font-size:14px;">波特率</td>
+           <td class="lap_put">
+       <select class="easyui-combobox" id="baud" data-options="panelHeight:'auto',editable:false"  style="width: 218px;">
+       <option value="2">115200</option>
+       <option value="0">921600</option>
+       <option value="1">460800</option>
+       <option value="3">38400</option>
+       <option value="4">19200</option>
+       <option value="5">9600</option>
+       <option value="6">4800</option>
+       <option value="7">2400</option>
+       <option value="8">1200</option>
+       <option value="9">300</option>
+       </select>
+       </td>
+       </tr>
+       <tr>
+           <td class="lap_put" style="font-size:14px;">数据位</td>
+           <td class="lap_put">
+       <select class="easyui-combobox" id="databit" data-options="panelHeight:'auto',editable:false"  style="width: 218px;">
+       <option value="8">8</option>
+       <option value="7">7</option>
+       </select>
+       </td>
+       </tr>
+       <tr>
+           <td class="lap_put" style="font-size:14px;">校验位</td>
+           <td class="lap_put">
+       <select class="easyui-combobox" id="check" data-options="panelHeight:'auto',editable:false"  style="width: 218px;">
+       <option value="78">None</option>
+       <option value="69">odd</option>
+       <option value="79">even</option>
+       </select>
+       </td>
+       </tr>
+       <tr>
+           <td class="lap_put" style="font-size:14px;">停止位</td>
+           <td class="lap_put">
+       <select class="easyui-combobox" id="stop" data-options="panelHeight:'auto',editable:false"  style="width: 218px;">
+       <option value="1">1</option>
+       <option value="2">2</option>
+       </select>
+       </td>
+       </tr>
+    </table>
+    
+    <div style="margin-top:40px;">
+        <a href="javascript:void(0)" class="blue_btn"
+            onclick="btnsave();"><span id="tagcancel">保存</span></a>
+    </div>
+  </div>
+</body>
+</html>
+
+

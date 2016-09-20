@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../Resource/EasyUI/themes/bootstrap/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="../../Resource/EasyUI/themes/icon.css" />
+    <link rel="stylesheet" type="text/css" href="../../Resource/EasyUI/css/Common.css" />
+    <script type="text/javascript" src="../../Resource/EasyUI/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="../../Resource/EasyUI/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../../Resource/Js/Common.js"></script>
+    <script type="text/javascript" src="Js/ChannelSet.js"></script>
+    <script type="text/javascript">
+        loadJsFile("../../Resource/EasyUI/locale/");
+    </script>
+</head>
+<body>
+   <div class="itemhead">
+        <h3>通道设置
+        </h3>
+    </div>
+    <div  style="height: 100px; " class="item">
+     <div style="float: left; height: 90%; margin-right:40px;" >
+         <table style="width: 100%;height: 100%;" >
+            <tr>
+                <td class="td_head" align="right" colspan="1">
+                        <span id="tagTianxian">GPS</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="td_title" align="right" style="width:30%;">
+                    <span id="tagOpenAutoStart">L1</span>:
+                </td>
+                <td align="left" colspan="2" style="width:70%;">
+                    <span class="td_span">
+                    <input id="raAutoStartSetYes" type="radio" name="gpsl1" /><span id="tagYes">开启</span>
+                    <input id="raAutoStartSetNo" type="radio" name="gpsl1" /><span id="tagNo">关闭</span>
+                    </span>
+                </td>
+            </tr>
+             <tr>
+                <td class="td_title" align="right" style="width:30%;">
+                    <span id="Span1">L2</span>:
+                </td>
+                <td align="left" colspan="2" style="width:70%;">
+                    <span class="td_span">
+                    <input id="Radio1" type="radio" name="gpsl2" /><span id="Span2">开启</span>
+                    <input id="Radio2" type="radio" name="gpsl2" /><span id="Span3">关闭</span>
+                    </span>
+                </td>
+            </tr>
+             <tr>
+                <td class="td_title" align="right" style="width:30%;">
+                    <span id="Span4">L5</span>:
+                </td>
+                <td align="left" colspan="2" style="width:70%;">
+                    <span class="td_span">
+                    <input id="Radio3" type="radio" name="gpsl5" /><span id="Span5">开启</span>
+                    <input id="Radio4" type="radio" name="gpsl5" /><span id="Span6">关闭</span>
+                    </span>
+                </td>
+            </tr>
+        </table>
+     </div>
+     <div style="float: left;height: 90%; margin-right:40px;" >
+         <table style="width: 100%;height: 100%;" >
+            <tr>
+                <td class="td_head" align="right" colspan="1" >
+                        <span id="Span25">BDS</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="td_title" align="right" style="width:30%;">
+                    <span id="Span7">B1</span>:
+                </td>
+                <td align="left" colspan="2"  style="width:70%;">
+                    <span class="td_span">
+                    <input id="Radio5" type="radio" name="bdsb1" /><span id="Span8">开启</span>
+                    <input id="Radio6" type="radio" name="bdsb1" /><span id="Span9">关闭</span>
+                    </span>
+                </td>
+            </tr>
+             <tr>
+                <td class="td_title" align="right" style="width:30%;">
+                    <span id="Span10">B2</span>:
+                </td>
+                <td align="left" colspan="2" style="width:70%;">
+                    <span class="td_span">
+                    <input id="Radio7" type="radio" name="bdsb2" /><span id="Span11">开启</span>
+                    <input id="Radio8" type="radio" name="bdsb2" /><span id="Span12">关闭</span>
+                    </span>
+                </td>
+            </tr>
+             <tr>
+                <td class="td_title" align="right"  style="width:30%;">
+                    <span id="Span13">B3</span>:
+                </td>
+                <td align="left" colspan="2" style="width:70%;">
+                    <span class="td_span">
+                    <input id="Radio9" type="radio" name="bdsb3" /><span id="Span14">开启</span>
+                    <input id="Radio10" type="radio" name="bdsb3"/><span id="Span15">关闭</span>
+                    </span>
+                </td>
+            </tr>
+        </table>
+     </div>
+      <div style="float: left;height: 90%;" >
+         <table style="width: 100%;height: 100%;" >
+             <tr>
+                <td class="td_head" align="right" colspan="1">
+                        <span id="Span26">GLONASS</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="td_title" align="right"  style="width:30%;">
+                    <span id="Span16">GL1</span>:
+                </td>
+                <td align="left" colspan="2" style="width:70%;">
+                    <span class="td_span">
+                    <input id="Radio11" type="radio" name="gl1" /><span id="Span17">开启</span>
+                    <input id="Radio12" type="radio" name="gl1" /><span id="Span18">关闭</span>
+                    </span>
+                </td>
+            </tr>
+             <tr>
+                <td class="td_title" align="right" style="width:30%;">
+                    <span id="Span19">GL2</span>:
+                </td>
+                <td align="left" colspan="2" style="width:70%;">
+                    <span class="td_span">
+                    <input id="Radio13" type="radio" name="gl2" /><span id="Span20">开启</span>
+                    <input id="Radio14" type="radio" name="gl2" /><span id="Span21">关闭</span>
+                    </span>
+                </td>
+            </tr>
+        </table>
+     </div>
+    
+     </div>
+
+     <div class="item">
+         <table>
+             <tr>
+                <td >
+                <span id="tagAngleMask">通道号</span>:
+                </td>
+                <td align="left">
+                    <span  class="td_span">
+                        <input id="channel" class="easyui-validatebox lab_inner" data-options="required:true" style="width: 150px;"/>
+                    </span>
+                </td>
+                <td align="left" colspan="2" style="width:40%;">
+                <span class="td_span">
+                <input id="Radio17" type="radio" name="chanradio" /><span id="Span27">开启</span>
+                <input id="Radio18" type="radio" name="chanradio" /><span id="Span28">关闭</span>
+                </span>
+                </td>
+            </tr>
+          
+
+         </table>
+         <div style="margin-top:20px; ">
+         	<a href="javascript:void(0)"class="blue_btn"
+                        onclick="btnSaveInfo();"><span id="tagSave">确定</span></a>
+         	</div>
+     </div>  
+    
+</body>
+</html>

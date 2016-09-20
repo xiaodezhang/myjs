@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../Resource/EasyUI/themes/bootstrap/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="../../Resource/EasyUI/themes/icon.css" />
+    <link rel="stylesheet" type="text/css" href="../../Resource/EasyUI/css/Common.css" />
+    <script type="text/javascript" src="../../Resource/EasyUI/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="../../Resource/EasyUI/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../../Resource/Js/Common.js"></script>
+    <script type="text/javascript" src="../../Resource/Js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../Resource/Js/jcanvas.min.js"></script>
+    <script type="text/javascript" src="Js/SlTrackDiagram.js"></script>
+    <script type="text/javascript">
+        loadJsFile("../../Resource/EasyUI/locale/");
+    </script>
+</head>
+<body>
+    <div class="itemhead">
+       <h3>卫星跟踪图</h3>
+    </div>
+    
+    <div class="item">
+             <div style="margin-bottom:20px;">
+                <label>GPS</label> 
+                   <input id="raSatelliteGps" type="checkbox" checked="checked" name="cbSatelliteType" value="gps" onclick="checkBoxClick();"/>
+              
+                <label class="lap_left">GLONASS</label>
+                   <input id="raSatelliteGln" type="checkbox" checked="checked" name="cbSatelliteType" value="glonass" onclick="checkBoxClick();"/>
+              
+                <label class="lap_left">BDS</label>
+                   <input id="raSatelliteBds" type="checkbox" checked="checked" name="cbSatelliteType" value="bds" onclick="checkBoxClick();"/>
+               
+                <label class="lap_left">GALILEO</label>
+                   <input id="raSatelliteGalileo" type="checkbox" checked="checked" name="cbSatelliteType" value="galileo" onclick="checkBoxClick();"/>
+              
+                <label class="lap_left">SBAS</label>
+                   <input id="raSatelliteSbas" type="checkbox" checked="checked" name="cbSatelliteType" value="sbas" onclick="checkBoxClick();"/>
+             </div>
+        
+        <hr style="height:1px;border:none;border-top:1px solid #ddd;" />
+        
+             <div style="margin-top:20px; margin-bottom:20px;">
+                <label>L1</label>
+
+                <span style="display:inline-block; vertical-align:bottom; background-color:#e04831;height:20px;width:16px;"></span>
+             
+                <input id="cbTypeL1" type="checkbox" checked="checked" value="l1" name="cbTypeL" onclick="checkBoxClick('#cbTypeL1','l1');"/>
+                
+                
+                <label class="lap_left">L2</label>
+
+                <span style="display:inline-block; vertical-align:bottom; background-color:#3b89f5;height:20px;width:16px;"></span>
+             
+                <input id="cbTypeL2" type="checkbox" checked="checked" value="l2" name="cbTypeL" onclick="checkBoxClick('#cbTypeL2','l2');"/>               
+               
+                
+                <label class="lap_left">L5</label>
+
+                <span style="display:inline-block; vertical-align:bottom; background-color:#f9c000;height:20px;width:16px;"></span>
+             
+                <input id="cbTypeL5" type="checkbox" checked="checked" value="l5" name="cbTypeL" onclick="checkBoxClick('#cbTypeL5','l5');"/>  
+             </div>  
+        
+        <hr style="height:1px;border:none;border-top:1px solid #ddd;" />
+        
+    
+       <div style="margin-top:30px;">
+            <canvas id="canvasId" width='840' height='580'>
+            </canvas>
+       </div>
+    </div>
+</body>
+</html>

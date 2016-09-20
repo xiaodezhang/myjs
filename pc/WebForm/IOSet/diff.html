@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../Resource/EasyUI/themes/bootstrap/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="../../Resource/EasyUI/themes/icon.css" />
+    <link rel="stylesheet" type="text/css" href="../../Resource/EasyUI/css/Common.css" />
+    <script type="text/javascript" src="../../Resource/EasyUI/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="../../Resource/EasyUI/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../../Resource/Js/Common.js"></script>
+    <script type="text/javascript" src="../../Resource/Js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="Js/diff.js"></script>
+    <script type="text/javascript">
+        loadJsFile("../../Resource/EasyUI/locale/");
+    </script>
+</head>
+<body>
+	  <div class="itemhead">
+        <h3>IO设置</h3>
+    </div>
+
+    <div class="item">
+        <table style="height:60px">
+            <tr class="lap_put">
+                <th>
+                  <select class="easyui-combobox" id="trancetype" data-options="panelHeight:'auto',editable:false"  style="width: 218px;">
+                  <option value="3">TCP/IP</option>
+                  <option value="1">串口/com1</option>
+                  <option value="2">串口/com2</option>
+                  <option value="4">串口/com3</option>
+                  <option value="0">usb</option>
+                  </select>
+                </th>
+            </tr>
+            <tr class="lap_put">
+                <th>
+                  <select class="easyui-combobox" id="datatype" data-options="panelHeight:'auto',editable:false" name="state" style="width: 218px;">
+                  <option value="row">原始数据</option>
+                  <option value="rtcm3">rtcm3.0</option>
+                  <option value="rtcm32">rtcm3.2</option>
+                  <option value="rtcm24">rtcm2.4</option>
+                  <option value="cmr">cmr</option>
+                  <option value="nmea">nmea</option>
+                  </select>
+                </th>
+            </tr>
+        </table>
+        <div style="margin-top:20px; overflow:hidden;" id="tcpbool">
+        	<div style="margin-bottom:10px;"><span>服务器:</span><span id="server"></span></div>
+        	<div style="margin-bottom:10px;"><span>端口号:</span> <input id="port" class="easyui-validatebox" type="text"  style="display:none,width: 215px;" />
+</div>
+        	<div style="margin-bottom:10px;"><span>客户端:</span><input id="clientcheck" type="checkbox" value="1" name="clientcheck" onclick="clientbool(this)" /></span></div>
+        	<div id="checkdisplay" style="display:none; " >
+             <div style="margin-bottom:10px;"> 
+              <span>服务器ip</span>
+              <input id="serverip" class="easyui-validatebox" type="text"  style="display:none,width: 215px;" />
+             </div>
+             <div style="margin-bottom:20px;"> 
+              <span>端 口 &nbsp;</span>
+              <input id="serverport" class="easyui-validatebox" type="text"  style="display:none,width: 215px;" />
+             </div>
+          </div>
+        </div>
+        <table>
+            <h4>差分数据</h4>
+            <tr >
+            <td  class="lap_put">1033</td>
+            <td  class="lap_put">
+              <select class="easyui-combobox" id="r1033" data-options="panelHeight:'auto',editable:false" 
+                                                        name="rowdata" style="width: 218px;">
+              <option value="0">关闭</option>
+              <option value="1">1hz</option>
+              </select>
+            </td>
+            <tr>
+            <tr>
+            <td  class="lap_put">1005</td>
+            <td  class="lap_put">
+              <select class="easyui-combobox" id="r1005" data-options="panelHeight:'auto',editable:false" 
+                                                        name="rowdata" style="width: 218px;">
+              <option value="0">关闭</option>
+              <option value="1">1hz</option>
+              </select>
+            </td>
+            <tr>
+            <tr>
+            <td  class="lap_put">1006</td>
+            <td  class="lap_put">
+              <select class="easyui-combobox" id="r1006" data-options="panelHeight:'auto',editable:false" 
+                                                        name="rowdata" style="width: 218px;">
+              <option value="0">关闭</option>
+              <option value="1">1hz</option>
+              </select>
+            </td>
+            <tr>
+            <tr>
+            <td  class="lap_put">GPS</td>
+            <td>
+              <select class="easyui-combobox" id="gps" data-options="panelHeight:'auto',editable:false" 
+                                                      name="rowdata" style="width: 218px;">
+              <option value="0">关闭</option>
+              <option value="1">1hz</option>
+              </select>
+            </td>
+            <tr>
+            <tr>
+            <td  class="lap_put">BDS</td>
+            <td>
+              <select class="easyui-combobox" id="bds" data-options="panelHeight:'auto',editable:false"
+                                                     name="rowdata"  style="width: 218px;">
+              <option value="0">关闭</option>
+              <option value="1">1hz</option>
+              </select>
+            </td>
+            <tr>
+            <tr>
+            <td class="lap_put">GLONASS</td>
+            <td class="lap_put">
+              <select class="easyui-combobox" id="glo" data-options="panelHeight:'auto',editable:false" 
+                                                      name="rowdata" style="width: 218px;">
+              <option value="0">关闭</option>
+              <option value="1">1hz</option>
+              </select>
+            </td>
+            <tr>
+        </table>
+        <table>
+            <h4>差分星历数据</h4>
+            <tr>
+            <td  class="lap_put">GPS星历</td>
+            <td>
+              <select class="easyui-combobox" id="gpseph" data-options="panelHeight:'auto',editable:false" 
+                                                      name="rowdata" style="width: 218px;">
+              <option value="0">关闭</option>
+              <option value="5">5s</option>
+              <option value="10">10s</option>
+              <option value="30">30s</option>
+              <option value="60">60s</option>
+              <option value="120">120s</option>
+              </select>
+            </td>
+            <tr>
+            <tr>
+            <td  class="lap_put">BDS星历</td>
+            <td>
+              <select class="easyui-combobox" id="bdseph" data-options="panelHeight:'auto',editable:false"
+                                                     name="rowdata"  style="width: 218px;">
+              <option value="0">关闭</option>
+              <option value="5">5s</option>
+              <option value="10">10s</option>
+              <option value="30">30s</option>
+              <option value="60">60s</option>
+              <option value="120">120s</option>
+              </select>
+            </td>
+            <tr>
+            <tr>
+            <td class="lap_put">GLONASS星历</td>
+            <td class="lap_put">
+              <select class="easyui-combobox" id="gloeph" data-options="panelHeight:'auto',editable:false" 
+                                                      name="rowdata" style="width: 218px;">
+              <option value="0">关闭</option>
+              <option value="5">5s</option>
+              <option value="10">10s</option>
+              <option value="30">30s</option>
+              <option value="60">60s</option>
+              <option value="120">120s</option>
+              </select>
+            </td>
+            <tr>
+        </table>
+
+        <div style="margin-top:20px;">
+            <div style="float:left"><a href="javascript:void(0)" class="blue_btn"
+                        onclick="btnsave();"><span id="tagsave">确认</span></a> 
+            </div>
+
+
+            <div  style="float:left; margin-left:30px;"> <a href="javascript:void(0)" class="blue_btn"
+                        onclick="btncancel();"><span id="tagcancel">取消</span></a>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
